@@ -8,6 +8,5 @@ function addItem() {
         checked: false 
     }
     item.push(item)
-
-    console.log(items)
+    document.querySelector("#item").value = 
 }
