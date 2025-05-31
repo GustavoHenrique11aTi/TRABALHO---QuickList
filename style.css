@@ -1,14 +1,15 @@
-*{
+* {
+    *
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "inter", sans-serif;
 }
 
-: :root {
+ :root {
     font-size: 62.5%;
-
-    	--background-primary: #F4F5FB;
+    
+    --background-primary: #F4F5FB;
   --background-secondary: #FFF;
   --color-brand: #CA3884;
   --color-brand-hover: #A52C6B;
@@ -21,27 +22,27 @@
   --border-hover: #B9C2D0;
 }
 
-body{
+body {
     font-size: 1.6rem;
     padding: 3.2rem;
     background: var(--background-primary);
 }
 
-header{
-    margin-bottom: 4.4rem;
+header {
+margin-bottom: 4.4rem;
     max-width: 65.7rem;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
 
-    img{
+    img {
         width: 15.4rem;
         margin-inline: auto;
-    
+        margin-bottom: 3rem;
     }
 
-    button{
+    button {
         border: none;
         background: none;
         font-size: 1.4rem;
@@ -50,6 +51,7 @@ header{
         margin-bottom: 1.6rem;
         color: var(--color-brand);
         cursor: pointer;
+
     }
 
     h1{
@@ -58,14 +60,16 @@ header{
         line-height: 3.2rem;
     }
 }
-
-main{
-    max-width: 62.7rem;
+ 
+main {
+      max-width: 62.7rem;
     margin-inline: auto;
-}
+    }
+  
 
-.add-item{
-    margin-bottom: 4rem;
+
+ .add-item {
+   margin-bottom: 4rem;Add commentMore actions
 
     input{
         width: 100%;
@@ -89,7 +93,7 @@ main{
         }
     }
 
-    button {
+     button {
         background: var(--color-brand);
         border: none;
         color: var(--always-white);
@@ -105,7 +109,9 @@ main{
             background: var(--color-brand-hover);
         }
     }
-}
+ }
+    
+
 
 .list {
     .item {
@@ -143,6 +149,10 @@ main{
                 background: var(--color-brand);
                 border: 1px solid var(--color-brand);
                 transition: .2s;
+            }
+
+            label {
+                text-decoration: line-through;
             }
 
             label {
@@ -199,3 +209,29 @@ main{
     opacity: 0;
     transform: translate(-10px);
 }
+
+    @media(min-width: 627px) {
+        header {
+            img {
+                margin-bottom: 6.4rem;
+            }
+        }
+
+        .add-item {
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            gap: 1.6rem;
+
+            input {
+                margin-bottom: 0;
+                grid-column: 1 / 8;
+            }
+
+            button {
+                grid-column: 8 / 11;
+            }
+        }
+}      
+    
+
+    
