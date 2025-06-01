@@ -23,15 +23,15 @@ function showItemsList(){
         sectionList.innerHTML +=`
          <div class="item">
             <div>
-                <input type="checkbox" name="list" id="item-${index}>
+                <input type="checkbox" name="list" id="item-${index}">
 
                 <div class="custom-checkbox">
                     <img src="imagens/checked.svg" alt="checked">
                 </div>
-                  <label for="item-${index}>${item.name}</label>
+                  <label for="item-${index}">${item.name}</label>
                 <div>
 
-            <button>
+            <button onclick="remomeItem(${item.name})">
                <img src="imagens/trash-icon.svg" alt="trash icon">
              </button>
             </div>
@@ -40,3 +40,13 @@ function showItemsList(){
         
     })
 }
+
+function removeItem(itemName) {
+    const itemIndex = items.findIndex((item) => item.name === itemName )
+    
+    if(itemIndex !== -1)  {
+        items.splice(itemIndex, 1 )
+    }
+
+    showItemsList()
+} 
