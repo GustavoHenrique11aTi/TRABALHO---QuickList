@@ -3,6 +3,11 @@ const item  = []
 function addItem() {
      const itemName = document.querySelector("#item").value
 
+     if (itemName ===""){
+        alert("Digiteum item válido!")
+        return
+     }
+
     const item = {
         name: itemName,
         checked: false 
