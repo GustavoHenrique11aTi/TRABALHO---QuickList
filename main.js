@@ -39,7 +39,7 @@ function showItemsList() {
                 </div>
 
                 <button onclick="removeItem('${item.name}')">
-                    <img src="imagens/checked.svg" alt="trash icon">
+                    <img src="imagens/trash-icon.svg" alt="trash icon">
                 </button>
             </div>
         `
